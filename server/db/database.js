@@ -20,6 +20,6 @@ if(process.env.DATABASE_URL) {
   }
 }
 
-const db = new Sequelize(process.env.DATABASE_URL || `postgres://localhost:5432/ingredients`, config);
+const db = new Sequelize(process.env.DATABASE_URL || `postgres://localhost:5432/bookbuddy`, config);
 
 module.exports = db;

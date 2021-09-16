@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
-import { Login, Signup } from './components/Login';
-import Home from './components/Home';
-import {me} from './store/auth';
-import Pantry from './components/Pantry';
+import { Login, Signup } from './Login';
+import Home from './Home';
+import {me} from '../store/auth';
 
 class Routes extends Component {
   componentDidMount() {
@@ -19,8 +18,7 @@ class Routes extends Component {
         {isLoggedIn ? (
           <Switch>
             <Route path="/home" component={Home} />
-            {/* <Redirect to="/home" /> */}
-            <Route path="/pantry" component={Pantry} />
+            {/* <Route path="/pantry" component={Pantry} /> */}
           </Switch>
         ) : (
             <Switch>

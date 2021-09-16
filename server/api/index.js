@@ -1,23 +1,23 @@
 const router = require('express').Router();
-const Ingredient = require('../db/ingredient');
-const User = require('../db/user');
+//check this if having problems
+const { User }= require('../db');
 
-router.get('/pantry', async (req, res, next) => {
-  try {
-    const result = await Ingredient.findAll();
-    res.send(result)
-  } catch (err) {
-    next(err)
-  }
-});
+// router.get('/pantry', async (req, res, next) => {
+//   try {
+//     const result = await Ingredient.findAll();
+//     res.send(result)
+//   } catch (err) {
+//     next(err)
+//   }
+// });
 
-router.post('/pantry', async (req, res, next) => {
-  try {
-    res.status(201).send(await Ingredient.create(req.body))
-  } catch (err) {
-    next(err)
-  }
-});
+// router.post('/pantry', async (req, res, next) => {
+//   try {
+//     res.status(201).send(await Ingredient.create(req.body))
+//   } catch (err) {
+//     next(err)
+//   }
+// });
 
 router.post('/auth/login', async (req, res, next) => {
   try {
@@ -29,6 +29,7 @@ router.post('/auth/login', async (req, res, next) => {
 })
 
 router.post('/auth/signup', async (req, res, next) => {
+  console.log('in api/auth/signup')
   try {
     console.log('in sign up post server side')
     const user = await User.create(req.body)

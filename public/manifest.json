@@ -1,0 +1,15 @@
+{
+  "short_name": "Book Buddy",
+  "name": "Book Buddy PWA",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

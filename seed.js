@@ -1,6 +1,6 @@
 const { green, red } = require('chalk');
 const db = require('./server/db/database');
-const Ingredient = require('./server/db/ingredient');
+// const Ingredient = require('./server/db/ingredient');
 const User = require('./server/db/user');
 
 const seed = async () => {
@@ -8,12 +8,10 @@ const seed = async () => {
     await db.sync({ force: true });
     console.log('db synced!')
 
-    const ingredient1 = await Ingredient.create({
-      itemName: 'flour'
-    })
     const user1 = await User.create({
       id: 1,
       username: 'Preston',
+      email: 'preston@gmail.com',
       password: 'fun'
     })
 

@@ -1,3 +1,4 @@
-There is not a route to serve up all users from the database currently.
+Database not fully fledged. Only user model currently seeding and connected.
 
-Also, the app data (the ingredients in the pantry) is not tied to individual users at this point.
+Want to eventually associate books and journals with individual users.
+  (on Google Book API side as well)
